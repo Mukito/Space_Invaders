@@ -11,7 +11,11 @@ class TelaPrincipal:
         self.Largura = 600
         self.Altura = 800
         self.tela = pygame.display.set_mode((self.Largura, self.Altura))
-        pygame.display.set_caption('Space Invanders')
+        
+        icon = pygame.image.load('imagens/icon/spaceship.png')
+        pygame.display.set_icon(icon)
+        
+        pygame.display.set_caption('Space Invaders')
         try:
             self.fundo = pygame.image.load('imagens/cenario/bg.png')
         except Exception as e:
