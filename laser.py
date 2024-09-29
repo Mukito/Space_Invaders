@@ -5,6 +5,16 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 class Laser(pygame.sprite.Sprite):
     def __init__(self, pos, speed, screen_height, color=(255, 255, 0), size=(4,20)):
+
+        """
+        Inicializa o laser.
+
+        :param pos: Posição inicial do laser (x, y).
+        :param speed: Velocidade de movimento do laser.
+        :param screen_height: Altura da tela para verificar limites.
+        :param color: Cor do laser, padrão é amarelo.
+        :param size: Tamanho do laser, padrão é (4, 20).
+        """
         super().__init__()
         self.image = pygame.Surface(size)
         self.image.fill(color)                              # Preenche a superficie com a cor amarela
